@@ -1,0 +1,26 @@
+# Py-span-task
+# Written by Titus von der Malsburg <malsburg@posteo.de>
+# https://github.com/tmalsburg/py-span-task
+# Settings:
+# subject id = OSPANsbj014
+# allow_sloppy_spelling = False
+# heed_order = True
+# time_out_factor = 2.5
+phase	set.id	num.items	correctly.recalled	correctly.verified	mean.rt	max.rt	presented.items	recalled.items
+practice	1	3	0	2	4877	5085	g s v	i j k
+practice	2	2	2	2	7113	9953	w m	w m
+practice	3	3	2	3	4326	4930	l j q	i j q
+practice	4	2	2	2	4351	5210	p n	p n
+test	1	2	2	2	5506	6240	k r	k r
+test	2	5	4	4	5878	7426	t b h z c	t b h z i
+test	3	4	4	4	4071	5429	f d x r	f d x r
+test	4	3	3	3	4024	6490	k g j	k g j
+test	5	5	3	5	4105	4898	f d n q m	f d k m
+test	6	4	3	3	3198	3401	s p l h	s p i h
+test	7	2	2	2	3322	3493	b w	b w
+test	8	2	2	2	4195	5335	z v	z v
+test	9	4	1	4	5163	6084	x c t d	f d d t
+test	10	3	3	3	4014	4025	g k f	g k f
+test	11	5	4	5	4255	5958	t v s w q	t v s w
+test	12	3	3	3	3723	4523	n h j	n h j
+# Partial credit unit score (PCU): 0.850

@@ -1,0 +1,8 @@
+# Py-span-task
+# Written by Titus von der Malsburg <malsburg@posteo.de>
+# https://github.com/tmalsburg/py-span-task
+# Settings:
+# subject id = sbj086
+# allow_sloppy_spelling = False
+# heed_order = True
+# time_out_factor = 2.5

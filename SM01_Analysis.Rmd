@@ -1,0 +1,89 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+```{r}
+data <- read.csv(file = "SM01_Retest_Aesthetic_Task.csv")
+print(data)
+```
+
+```{r}
+#Splitting the dataframe by subject
+sbj <- split (data, data$subj)
+sbj[[1]]
+```
+
+```{r}
+```
+
+```{r}
+library("retimes")
+```
+```{r}
+#running loop for the aesthetic task
+d = NULL
+for (i in 1:100){
+  dist <-  timefit(sbj[[i]]$durs, iter = 10)
+  mu[i] <- dist@par[1]
+  sig[i] <- dist@par[2]
+  tau[i] <- dist@par[3]
+  log_like[i] <- dist@logLik
+  aic[i] <- dist@AIC
+  bic[i] <- dist@BIC
+}
+d <- rbind(d, data.frame(mu, sig, tau, log_like, aic, bic))
+d$subject <- 1:nrow(d)
+print(d)
+```
+```{r}
+for (x in 1:100){
+  durs_mean [x] <- mean(sbj[[x]]$durs)
+}
+print(durs_mean)
+```
+
+```{r}
+write.csv(d, file = "Aesthetic_Retest_Gauss.csv", row.names=FALSE)
+```
+
+```{r}
+mem_data <- read.csv(file = "SM01_Retest_Memorize_Task.csv")
+print(mem_data)
+```
+
+```{r}
+mem_sbj <- split (mem_data, mem_data$subj)
+mem_sbj[[1]]
+```
+
+```{r}
+df = NULL
+for (i in 1:100){
+  dist <-  timefit(mem_sbj[[i]]$durs)@par
+  mu[i] <- dist[1]
+  sig[i] <- dist[2]
+  tau[i] <- dist[3]
+}
+df <- rbind(df, data.frame(mu, sig, tau))
+df$subject <- 1:nrow(df)
+print(df)
+```
+```{r}
+write.csv(df, file = "Memorize_Retest_Gauss.csv", row.names=FALSE)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
