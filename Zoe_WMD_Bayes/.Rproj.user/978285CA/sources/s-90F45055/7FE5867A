@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1614799522390.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "7FE5867A",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 1614799522390,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "59E89759",
+        "caption" : "Task_Zscore_Final",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=Task_Zscore_Final&cache_key=59E89759",
+        "displayedObservations" : 196,
+        "environment" : "",
+        "expression" : "Task_Zscore_Final",
+        "object" : "Task_Zscore_Final",
+        "preview" : 0,
+        "totalObservations" : 196,
+        "variables" : 10
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
